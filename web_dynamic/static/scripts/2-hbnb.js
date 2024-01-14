@@ -23,7 +23,7 @@ $(document).ready(function () {
     // $('div.amenities h4').text(amenityList.keysjoin(', '));
   });
 
-  const API = "http://0.0.0.0:5001/api/v1/status/";
+  const API = "http://localhost:5001/api/v1/status/";
   $.get(API, (data, status) => {
     console.log(data);
     console.log(status);
