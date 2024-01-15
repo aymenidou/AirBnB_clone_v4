@@ -25,8 +25,8 @@ $(document).ready(function () {
 
   const API = 'http://localhost:5001/api/v1/status/';
   $.get(API, (data, status) => {
-    console.log(data);
-    console.log(status);
+    // console.log(data);
+    // console.log(status);
     if (status === 'success' && data.status === 'OK') {
       $('#api_status').addClass('available');
     } else {
