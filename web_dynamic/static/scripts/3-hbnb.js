@@ -43,33 +43,29 @@ $(document).ready(function () {
       console.log('Data:', data);
       const placesSection = $('.places');
       $.each(data, function (index, place) {
-        const article = $('<article>');
-        article.append('<h2>' + place.name + '</h2>');
-        article.append(
-          '<div class="price_by_night">$' + place.price_by_night + '</div>'
-        );
-        article.append(
+        const article = $('<article></article>');
+        article.append('<div class="title_box">' +
+          '<h2>' + place.name + '</h2>' +
+          '<div class="price_by_night">$' + place.price_by_night + '</div>' +
+          '</div>' +
+          '<div class="information">' +
+
           '<div class="max_guest">' +
-            place.max_guest +
-            ' Guest' +
-            (place.max_guest !== 1 ? 's' : '') +
-            '</div>'
-        );
-        article.append(
+          place.max_guest +
+          ' Guest' +
+          (place.max_guest !== 1 ? 's' : '') +
+          '</div>' +
           '<div class="number_rooms">' +
-            place.number_rooms +
-            ' Bedroom' +
-            (place.number_rooms !== 1 ? 's' : '') +
-            '</div>'
-        );
-        article.append(
+          place.number_rooms +
+          ' Bedroom' +
+          (place.number_rooms !== 1 ? 's' : '') +
+          '</div>' +
           '<div class="number_bathrooms">' +
-            place.number_bathrooms +
-            ' Bathroom' +
-            (place.number_bathrooms !== 1 ? 's' : '') +
-            '</div>'
-        );
-        article.append(
+          place.number_bathrooms +
+          ' Bathroom' +
+          (place.number_bathrooms !== 1 ? 's' : '') +
+          '</div>' +
+          '</div>' +
           '<div class="description">' + place.description + '</div>'
         );
         placesSection.append(article);

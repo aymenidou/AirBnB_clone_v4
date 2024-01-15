@@ -1,6 +1,6 @@
 const $ = window.$;
 $(document).ready(function () {
-  let amenityList = [];
+  const amenityList = [];
   // let amenityList = {};
   $('input[type="checkbox"]').change(function () {
     // get amenity id from attribute
@@ -23,7 +23,7 @@ $(document).ready(function () {
     // $('div.amenities h4').text(amenityList.keysjoin(', '));
   });
 
-  const API = "http://localhost:5001/api/v1/status/";
+  const API = 'http://localhost:5001/api/v1/status/';
   $.get(API, (data, status) => {
     console.log(data);
     console.log(status);
@@ -33,5 +33,4 @@ $(document).ready(function () {
       $('#api_status').removeClass('available');
     }
   });
-
 });

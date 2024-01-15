@@ -1,6 +1,6 @@
 const $ = window.$;
 $(document).ready(function () {
-  let amenityList = [];
+  const amenityList = [];
   // let amenityList = {};
   $('input[type="checkbox"]').change(function () {
     // get amenity id from attribute
