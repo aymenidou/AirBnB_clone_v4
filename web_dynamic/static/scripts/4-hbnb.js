@@ -73,17 +73,17 @@ $(document).ready(function () {
     }
   });
 
-  $("button").click(function (e) {
+  $('button').click(function (e) {
     e.preventDefault();
-    console.log("search stuff")
-    var settings = {
-      "url": "http://0.0.0.0:5001/api/v1/places_search",
-      "method": "POST",
-      "timeout": 0,
-      "headers": {
-        "Content-Type": "application/json"
+    console.log('search stuff');
+    const settings = {
+      url: 'http://0.0.0.0:5001/api/v1/places_search',
+      method: 'POST',
+      timeout: 0,
+      headers: {
+        'Content-Type': 'application/json'
       },
-      "data": JSON.stringify({}),
+      data: JSON.stringify({})
     };
 
     $.ajax(settings).done(function (response) {
